@@ -7,8 +7,22 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <style>
+        .result-display {
+            border: 2px solid black;
+            border-radius: 4px;
+        }
+    </style>
     <button onclick="playRound('rock')">Rock</button>
     <button onclick="playRound('paper')">Paper</button>
     <button onclick="playRound('scissors')">Scissors</button>
+    <div class="result-display">
+        <div class="score-container">
+            <p>
+                Your score: <span class="human-score">0</span> | Computer score: <span class="computer-score">0</span>
+            </p>
+        </div>
+        <!-- Here are the DOM methods showing results. -->
+    </div>
 </body>
 </html>
