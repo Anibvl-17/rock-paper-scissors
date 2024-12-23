@@ -37,24 +37,24 @@ function getHumanChoice() {
 
 function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
-    
+
     // Case: Draw, both choices are equal
     if (humanChoice === computerChoice) {
-        console.log("Draw! Both chose " + humanChoice);
+        updateResult("Draw! Both chose " + humanChoice);
         return;
     }
 
     // Case human chose Rock
     if (humanChoice === "rock") {
         if (computerChoice === "paper") {
-            console.log("You lose! Paper beats Rock");
             computerScore++;
+            updateResult("You lose! Paper beats Rock");
             return;
         }
         
         if (computerChoice === "scissors") {
-            console.log("You win! Scissors beats Rock");
             humanScore++;
+            updateResult("You win! Scissors beats Rock");
             return;
         }
     }
@@ -62,14 +62,14 @@ function playRound(humanChoice) {
     // Case human chose Paper
     if (humanChoice === "paper") {
         if (computerChoice === "rock") {
-            console.log("You win! Paper beats Rock");
             humanScore++;
+            updateResult("You win! Paper beats Rock");
             return;
         }
         
         if (computerChoice === "scissors") {
-            console.log("You lose! Scissors beats Paper");
             computerScore++;
+            updateResult("You lose! Scissors beats Paper");
             return;
         }
     }
@@ -77,17 +77,30 @@ function playRound(humanChoice) {
     // Case human chose scissors
     if (humanChoice === "scissors") {
         if (computerChoice === "paper") {
-            console.log("You win! Scissors beats Paper");
             humanScore++;
+            updateResult("You win! Scissors beats Paper");
             return;
         }
         
         if (computerChoice === "rock") {
-            console.log("You lose! Rock beats Scissors");
             computerScore++;
+            updateResult("You lose! Rock beats Scissors");
             return;
         }
     }
+}
+
+function updateResult(message) {
+    const container = document.querySelector(".result-display");
+    const humanScoreElement = document.querySelector(".human-score");
+    const computerScoreElement = document.querySelector(".computer-score");
+    
+    const result = document.createElement("p");
+    result.textContent = message;
+    container.appendChild(result);
+
+    humanScoreElement.textContent = humanScore;
+    computerScoreElement.textContent = computerScore;
 }
 
 if (humanScore === computerScore) {
