@@ -35,7 +35,9 @@ function getHumanChoice() {
     } while(wrongInput)
 }
 
-function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice) {
+    let computerChoice = getComputerChoice();
+    
     // Case: Draw, both choices are equal
     if (humanChoice === computerChoice) {
         console.log("Draw! Both chose " + humanChoice);
@@ -86,11 +88,6 @@ function playRound(humanChoice, computerChoice) {
             return;
         }
     }
-}
-
-for (let i = 1; i < 6; i++) {
-    console.log(`Round ${i}/5`);
-    playRound(getHumanChoice(), getComputerChoice());
 }
 
 if (humanScore === computerScore) {
