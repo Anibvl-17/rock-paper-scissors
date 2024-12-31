@@ -1,34 +1,31 @@
 body {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  text-align: center;
 }
 
 .buttons-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 button {
-    padding: 10px 20px;
-}
-
-.result-display {
-    text-align: center;
+  padding: 10px 20px;
 }
 
 .win-text {
-    color: green;
+  color: green;
 }
 
 .draw-text {
-    color: blue;
+  color: blue;
 }
 
 .lose-text {
-    color: red;
+  color: red;
 }
