@@ -49,7 +49,7 @@ function playRound(humanChoice) {
 
     // Case: Draw, both choices are equal
     if (humanChoice === computerChoice) {
-        updateResult(`Draw! Both chose + ${humanChoice}`, DRAW);
+        updateResult(`Draw! Both chose ${humanChoice}`, DRAW);
     }
 
     // Case human chose Rock
