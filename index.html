@@ -8,12 +8,6 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="buttons-container">
-        <button id="rock-btn" onclick="playRound('rock')">Rock</button>
-        <button id="paper-btn" onclick="playRound('paper')">Paper</button>
-        <button id="scissors-btn" onclick="playRound('scissors')">Scissors</button>
-        <button id="reset-btn" onclick="resetGame()">Reset</button>
-    </div>
     
     <div class="game-info-container">
         <p class="round">
@@ -29,6 +23,12 @@
                 <span class="score computer-score">0</span>
             </p>
         </div>
+    </div>
+    <div class="buttons-container">
+        <button id="rock-btn" onclick="playRound('rock')">Rock</button>
+        <button id="paper-btn" onclick="playRound('paper')">Paper</button>
+        <button id="scissors-btn" onclick="playRound('scissors')">Scissors</button>
+        <button id="reset-btn" onclick="resetGame()">Reset</button>
     </div>
     <div class="result-display">
         <!-- Here are the DOM methods showing results. -->
