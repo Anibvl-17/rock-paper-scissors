@@ -1,3 +1,7 @@
+const DRAW = 0;
+const WIN = 1;
+const LOSE = 2;
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -45,19 +49,19 @@ function playRound(humanChoice) {
 
     // Case: Draw, both choices are equal
     if (humanChoice === computerChoice) {
-        updateResult("Draw! Both chose " + humanChoice);
+        updateResult(`Draw! Both chose + ${humanChoice}`, DRAW);
     }
 
     // Case human chose Rock
     if (humanChoice === "rock") {
-        if (computerChoice === "paper") {
-            computerScore++;
-            updateResult("You lose! Paper beats Rock");
-        }
-        
         if (computerChoice === "scissors") {
             humanScore++;
-            updateResult("You win! Scissors beats Rock");
+            updateResult(`You win! Scissors beats Rock`, WIN);
+        }
+
+        if (computerChoice === "paper") {
+            computerScore++;
+            updateResult(`You lose! Paper beats Rock`, LOSE);
         }
     }
 
@@ -65,12 +69,12 @@ function playRound(humanChoice) {
     if (humanChoice === "paper") {
         if (computerChoice === "rock") {
             humanScore++;
-            updateResult("You win! Paper beats Rock");
+            updateResult(`You win! Paper beats Rock`, WIN);
         }
         
         if (computerChoice === "scissors") {
             computerScore++;
-            updateResult("You lose! Scissors beats Paper");
+            updateResult(`You lose! Scissors beats Paper`, LOSE);
         }
     }
 
@@ -78,22 +82,34 @@ function playRound(humanChoice) {
     if (humanChoice === "scissors") {
         if (computerChoice === "paper") {
             humanScore++;
-            updateResult("You win! Scissors beats Paper");
+            updateResult(`You win! Scissors beats Paper`, WIN);
         }
         
         if (computerChoice === "rock") {
             computerScore++;
-            updateResult("You lose! Rock beats Scissors");
+            updateResult(`You lose! Rock beats Scissors`, LOSE);
         }
     }
 }
 
-function updateResult(message) {
+function updateResult(message, roundResult) {
     humanScoreElement.textContent = humanScore;
     computerScoreElement.textContent = computerScore;
     
     const result = document.createElement("p");
     result.textContent = message;
+
+    switch (roundResult) {
+        case DRAW:
+            result.classList.add("draw-text");
+            break;
+        case WIN:
+            result.classList.add("win-text");
+            break;
+        case LOSE:
+            result.classList.add("lose-text");
+    }
+
     container.appendChild(result);
 
     if (humanScore === 5 || computerScore === 5) {
