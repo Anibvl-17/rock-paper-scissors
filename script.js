@@ -2,6 +2,7 @@ const DRAW = 0;
 const WIN = 1;
 const LOSE = 2;
 
+let rounds = 0;
 let humanScore = 0;
 let computerScore = 0;
 
@@ -44,7 +45,6 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice) {
-
     let computerChoice = getComputerChoice();
 
     // Case: Draw, both choices are equal
@@ -90,6 +90,9 @@ function playRound(humanChoice) {
             updateResult(`You lose! Rock beats Scissors`, LOSE);
         }
     }
+
+    rounds++;
+    document.querySelector(".round-counter").textContent = rounds;
 }
 
 function updateResult(message, roundResult) {
@@ -126,6 +129,7 @@ function updateResult(message, roundResult) {
 
 function resetGame() {
     container.textContent = "";
+    rounds = 0;
     humanScore = 0;
     computerScore = 0;
     document.getElementById("rock-btn").disabled = false;
