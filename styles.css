@@ -16,3 +16,19 @@ body {
 button {
     padding: 10px 20px;
 }
+
+.result-display {
+    text-align: center;
+}
+
+.win-text {
+    color: green;
+}
+
+.draw-text {
+    color: blue;
+}
+
+.lose-text {
+    color: red;
+}
