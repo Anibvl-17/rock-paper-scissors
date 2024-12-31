@@ -132,10 +132,10 @@ function resetGame() {
     rounds = 0;
     humanScore = 0;
     computerScore = 0;
+    document.querySelector(".round-counter").textContent = 0;
     document.getElementById("rock-btn").disabled = false;
     document.getElementById("paper-btn").disabled = false;
     document.getElementById("scissors-btn").disabled = false;
-    document.getElementById("reset-btn").disabled = true;
     humanScoreElement.textContent = humanScore;
     computerScoreElement.textContent = computerScore;
 }
