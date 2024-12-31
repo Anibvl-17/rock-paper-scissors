@@ -15,13 +15,20 @@
         <button id="reset-btn" onclick="resetGame()">Reset</button>
     </div>
     
-    <div class="score-container">
+    <div class="game-info-container">
         <p>
             Round <span class="round-counter">0</span>
         </p>
-        <p>
-            Your score: <span class="human-score">0</span> | Computer score: <span class="computer-score">0</span>
-        </p>
+        <div class="score-container">
+            <p>
+                Your score<br>
+                <span class="score human-score">0</span>
+            </p>
+            <p>
+                Computer score<br>
+                <span class="score computer-score">0</span>
+            </p>
+        </div>
     </div>
     <div class="result-display">
         <!-- Here are the DOM methods showing results. -->
