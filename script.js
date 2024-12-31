@@ -98,6 +98,9 @@ function playRound(humanChoice) {
 function updateResult(message, roundResult) {
     humanScoreElement.textContent = humanScore;
     computerScoreElement.textContent = computerScore;
+
+    // Remove draw messages to avoid excessive messages
+    document.querySelector(".draw-text")?.remove();
     
     const result = document.createElement("p");
     result.textContent = message;
