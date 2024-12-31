@@ -11,7 +11,7 @@ button {
 }
 
 p {
-    margin: 12px 0;
+  margin: 12px 0;
 }
 
 .buttons-container {
@@ -24,27 +24,27 @@ p {
 }
 
 .game-info-container {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    border: 2px solid black;
-    width: 30%;
-    font-weight: bold;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border: 2px solid black;
+  width: 30%;
+  font-weight: bold;
 }
 
 .score-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .score {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .round {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .win-text {
