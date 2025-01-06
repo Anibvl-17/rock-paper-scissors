@@ -10,6 +10,11 @@ const container = document.querySelector(".result-display");
 const humanScoreElement = document.querySelector(".human-score");
 const computerScoreElement = document.querySelector(".computer-score");
 
+document.getElementById("rock-btn").addEventListener("click", () => { playRound("rock") });
+document.getElementById("paper-btn").addEventListener("click", () => { playRound("paper") });
+document.getElementById("scissors-btn").addEventListener("click", () => { playRound("scissors")});
+document.getElementById("reset-btn").addEventListener("click", resetGame);
+
 console.log("Welcome!");
 
 function getComputerChoice() {
