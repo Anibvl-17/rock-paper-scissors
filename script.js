@@ -135,7 +135,6 @@ function updateResult(message, roundResult) {
     document.getElementById("rock-btn").disabled = true;
     document.getElementById("paper-btn").disabled = true;
     document.getElementById("scissors-btn").disabled = true;
-    document.getElementById("reset-btn").disabled = false;
   }
 }
 
