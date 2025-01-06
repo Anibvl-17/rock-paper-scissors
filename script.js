@@ -127,10 +127,9 @@ function updateResult(message, roundResult) {
 
   if (humanScore === 5 || computerScore === 5) {
     const finalResult = document.createElement("p");
-    finalResult.style.backgroundColor =
-      humanScore === 5 ? "lightgreen" : "lightcoral";
+    finalResult.classList.add("final-result");
+    finalResult.classList.add(humanScore === 5 ? "result-win" : "result-lose");
     finalResult.textContent = humanScore === 5 ? "You win!" : "You lose :(";
-    finalResult.style.padding = "10px 15px";
     container.appendChild(finalResult);
     document.getElementById("rock-btn").disabled = true;
     document.getElementById("paper-btn").disabled = true;
