@@ -58,3 +58,15 @@ p {
 .lose-text {
   color: red;
 }
+
+.final-result {
+  padding: 15px;
+}
+
+.result-win {
+  background-color: lightgreen;
+}
+
+.result-lose {
+  background-color: lightcoral;
+}
