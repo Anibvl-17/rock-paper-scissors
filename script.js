@@ -20,7 +20,7 @@ console.log("Welcome!");
 function getComputerChoice() {
   let randomNumber = Math.random();
 
-  if (randomNumber > 0 && randomNumber <= 0.33) {
+  if (randomNumber >= 0 && randomNumber <= 0.33) {
     return "rock";
   } else if (randomNumber > 0.33 && randomNumber <= 0.66) {
     return "paper";
