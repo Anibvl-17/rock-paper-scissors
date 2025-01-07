@@ -4,8 +4,9 @@ body {
   align-items: center;
   text-align: center;
   gap: 16px;
-  background-color: #f3f4f6;
   padding: 24px;
+  background-color: #f3f4f6;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -23,6 +24,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 16px;
+  margin-top: 24px;
 }
 
 .game-info-container {
